@@ -10,6 +10,10 @@ const cityName = document.getElementById("city_name")
 
 const info = document.getElementById("info");
 
+const conditionIcon = document.getElementById("conditionIcon");
+
+const conditionTextDiv = document.getElementById("conditionText");
+
 
 
 
@@ -32,12 +36,21 @@ btn.addEventListener("click", function(){
         const temperature = data.current.temp_c
         temp.innerHTML = temperature + "°C"
         console.log(temperature)
+        const conditionText = data.current.condition.text;
+        const conditionImgSRC = data.current.condition.icon;
+        let img = document.createElement('img');
+        img.src = conditionImgSRC;
+        console.log(img)
+        console.log(conditionText);
+        console.log(conditionImgSRC);
+        document.getElementById("conditionIcon").appendChild(img);        
+        conditionTextDiv.innerHTML = conditionText;
     })
     .catch(err=>{
         console.warn(err)
     })
-
     form.value = "";
+    document.getElementById("conditionIcon").innerHTML = "";
 })
 
 
