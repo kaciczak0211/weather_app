@@ -14,6 +14,8 @@ const conditionIcon = document.getElementById("conditionIcon");
 
 const conditionTextDiv = document.getElementById("conditionText");
 
+const time = document.getElementById("time")
+
 
 
 
@@ -31,6 +33,7 @@ btn.addEventListener("click", function(){
     })
     .then(data=>{
         info.style.display = "block"
+        time.innerHTML = `${data.current.last_updated}`
         cityName.innerHTML = `${data.location.name}, ${data.location.country}`;
         console.log(data)
         const temperature = data.current.temp_c
