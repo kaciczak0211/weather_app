@@ -1,0 +1,59 @@
+body{
+  background-image: url(bc.jpg);
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#search-con{
+  padding: 20px;
+  border: 1px white solid;
+  border-radius: 1rem;
+}
+
+input{
+  all: unset;
+  font-size: 20px;
+}
+
+button{
+  all: unset;
+  font-size: 20px;
+}
+
+
+button:hover{
+  cursor: pointer;
+}
+
+
+
+#info{
+  display: none;
+  margin-top: 2rem;
+  background-color: #103056;
+  padding: 2rem;
+  border: 1px white solid;
+  border-radius: 1rem;
+}
+
+footer{
+  position: absolute; 
+  bottom: 0; 
+  z-index: 10;
+}
+
+h3{
+  font-size: 2rem;
+}
+
+footer:hover{
+  cursor: pointer;
+}
+
+a{
+  all: unset;
+}
