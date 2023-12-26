@@ -23,7 +23,7 @@ const time = document.getElementById("time")
 
 btn.addEventListener("click", function(){
     const city = document.getElementById("city").value
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${city}`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${city}`)
     .then(res=>{
         if(!res.ok){
             throw new Error("wrong value")
